@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bluecom_CustomAttr>
+            <version>0.0.1</version>
+        </Bluecom_CustomAttr>
+    </modules>
+    <global>
+        <!--add custom product attribute to quote item-->
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <custom_attribute />
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
+        <!--convert custom product attribute from quote item to order item-->
+        <fieldsets>
+            <sales_convert_quote_item>
+                <custom_attribute>
+                    <to_order_item>*</to_order_item>
+                </custom_attribute>
+            </sales_convert_quote_item>
+            <sales_convert_order_item>
+                <custom_attribute>
+                    <to_quote_item>*</to_quote_item>
+                </custom_attribute>
+            </sales_convert_order_item>
+        </fieldsets>
+        <helpers>
+            <bluecom_customattr>
+                <class>Bluecom_CustomAttr_Helper</class>
+            </bluecom_customattr>
+        </helpers>
+        <models>
+            <bluecom_customattr>
+                <class>Bluecom_CustomAttr_Helper</class>
+            </bluecom_customattr>
+        </models>
+        <events>
+            <sales_quote_item_set_product>
+                <observers>
+                    <bluecom_customattr>
+                        <class>bluecom_customattr/observer</class>
+                        <method>salesQuoteItemSetCustomAttribute</method>
+                    </bluecom_customattr>
+                </observers>
+            </sales_quote_item_set_product>
+        </events>
+        <resources>
+            <customattr_setup>
+                <setup>
+                    <module>Bluecom_CustomAttr</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </customattr_setup>
+        </resources>
+    </global>
+</config>

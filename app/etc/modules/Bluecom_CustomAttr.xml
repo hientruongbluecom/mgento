@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Bluecom_CustomAttr>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Bluecom_CustomAttr>
+    </modules>
+</config>
