@@ -29,6 +29,17 @@
                 </custom_attribute>
             </sales_convert_order_item>
         </fieldsets>
+        <events>
+            <sales_quote_item_set_product>
+                <observers>
+                    <bluecom_customattr>
+                        <type>singleton</type>
+                        <class>Bluecom_CustomAttr_Model_Observer</class>
+                        <method>setCustomAttribute</method>
+                    </bluecom_customattr>
+                </observers>
+            </sales_quote_item_set_product>
+        </events>
         <helpers>
             <bluecom_customattr>
                 <class>Bluecom_CustomAttr_Helper</class>
@@ -39,16 +50,6 @@
                 <class>Bluecom_CustomAttr_Helper</class>
             </bluecom_customattr>
         </models>
-        <events>
-            <sales_quote_item_set_product>
-                <observers>
-                    <bluecom_customattr>
-                        <class>bluecom_customattr/observer</class>
-                        <method>salesQuoteItemSetCustomAttribute</method>
-                    </bluecom_customattr>
-                </observers>
-            </sales_quote_item_set_product>
-        </events>
         <resources>
             <customattr_setup>
                 <setup>
