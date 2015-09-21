@@ -6,4 +6,5 @@ class Bluecom_CustomAttr_Model_Observer extends Varien_Object
         $product = $observer->getProduct();
         $item->setCustomAttribute($product->getCustomAttribute());
     }
+
 }

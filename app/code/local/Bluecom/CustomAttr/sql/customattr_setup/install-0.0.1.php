@@ -1,6 +1,5 @@
 <?php
 $installer = $this;
-
 $installer->addAttribute('catalog_product', 'custom_attribute', array(
     'group'             => 'General',
     'type'              => Varien_Db_Ddl_Table::TYPE_VARCHAR,
