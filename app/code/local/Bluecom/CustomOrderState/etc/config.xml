@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bluecom_CustomOrderState>
+             <version>0.1.0</version>
+        </Bluecom_CustomOrderState>
+    </modules>
+    <global>
+        <resources>
+            <customorderstate_setup>
+                <setup>
+                    <module>Bluecom_CustomOrderState</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </customorderstate_setup>
+            <customorderstate_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </customorderstate_write>
+            <customorderstate_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </customorderstate_read>
+        </resources>
+        <sales>
+            <order>
+                <statuses>
+                    <partial_paid translate="label">
+                        <label>Partial Paid</label>
+                    </partial_paid>
+                </statuses>
+                <states>
+                    <partial_paid translate="label">
+                        <label>Partial Paid</label>
+                        <statuses>
+                            <partial_paid default="1"/>
+                        </statuses>
+                    </partial_paid>
+                </states>
+            </order>
+        </sales>
+    </global>
+</config>
