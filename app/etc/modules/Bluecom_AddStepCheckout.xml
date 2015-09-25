@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Bluecom_AddStepCheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Bluecom_AddStepCheckout>
+    </modules>
+</config>

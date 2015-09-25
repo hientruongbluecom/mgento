@@ -1,0 +1,21 @@
+<layout version="0.1.0">
+    <sales_order_view>
+        <reference name="my.account.wrapper">
+            <block type="addstepcheckout/custom_order" name="custom.order" template="addstepcheckout/order.phtml" after='sales.order.info' />
+        </reference>
+    </sales_order_view>
+    <checkout_onepage_index> <!-- Adding our new step to onepage block  -->
+        <reference name='checkout.onepage'>
+            <action method='setTemplate'><template>addstepcheckout/checkout/onepage.phtml</template></action>
+            <block type="bluecom_addstepcheckout/checkout_onepage_excellence" name="checkout.onepage.excellence" as="excellence" template="addstepcheckout/checkout/onepage/excellence.phtml"/>
+        </reference>
+        <reference name='checkout.progress'>
+            <action method='setTemplate'><template>addstepcheckout/checkout/onepage/progress.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_progress>
+        <reference name='root'>
+            <action method='setTemplate'><template>addstepcheckout/checkout/onepage/progress.phtml</template></action>
+        </reference>
+    </checkout_onepage_progress>
+</layout>
