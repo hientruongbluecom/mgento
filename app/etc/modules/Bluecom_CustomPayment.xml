@@ -1,0 +1,12 @@
+<config>
+    <modules>
+        <Bluecom_CustomPayment>
+            <active>true</active>
+            <codePool>local</codePool>
+
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </Bluecom_CustomPayment>
+    </modules>
+</config>

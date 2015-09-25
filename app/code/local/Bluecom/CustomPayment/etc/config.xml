@@ -1,0 +1,50 @@
+<config>
+    <modules>
+        <Bluecom_CustomPayment>
+            <version>0.1.0</version>
+        </Bluecom_CustomPayment>
+    </modules>
+    <global>
+        <models>
+            <custompayment>
+                <class>Bluecom_CustomPayment_Model</class>
+            </custompayment>
+        </models>
+        <helpers>
+            <custompayment>
+                <class>Bluecom_CustomPayment_Helper</class>
+            </custompayment>
+        </helpers>
+        <blocks>
+            <custompayment>
+                <class>Bluecom_CustomPayment_Block</class>
+            </custompayment>
+        </blocks>
+    </global>
+    <default>
+        <payment>
+            <custompayment>
+                <model>custompayment/standard</model>
+                <active>1</active>
+                <order_status>pending</order_status>
+                <title>CUSTOM CARD</title>
+                <payment_action>sale</payment_action>
+                <submit_url>https://someurl.com</submit_url>
+                <merchant_id>Insert merchant id</merchant_id>
+                <allowspecific>0</allowspecific>
+                <sort_order>1</sort_order>
+            </custompayment>
+        </payment>
+    </default>
+    <frontend>
+        <routers>
+            <custompayment>
+                <use>standard</use>
+                <args>
+                    <module>Bluecom_CustomPayment</module>
+                    <frontname>custompayment</frontname>
+                </args>
+            </custompayment>
+        </routers>
+    </frontend>
+</config>
