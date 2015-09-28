@@ -17,10 +17,5 @@
                 </rewrite>
             </tax>
         </models>
-        <helpers>
-            <bluecom_geoipdefaults>
-                <class>Bluecom_GeoIpDefaults_Helper</class>
-            </bluecom_geoipdefaults>
-        </helpers>
     </global>
 </config>
