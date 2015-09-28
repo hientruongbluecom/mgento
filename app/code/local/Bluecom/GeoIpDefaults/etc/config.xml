@@ -1,0 +1,26 @@
+<config>
+    <modules>
+        <Bluecom_GeoIpDefaults>
+            <version>0.1.0</version>
+        </Bluecom_GeoIpDefaults>
+    </modules>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <store>Bluecom_GeoIpDefaults_Model_Core_Store</store>
+                </rewrite>
+            </core>
+            <tax>
+                <rewrite>
+                    <calculation>Bluecom_GeoIpDefaults_Model_Tax_Calculation</calculation>
+                </rewrite>
+            </tax>
+        </models>
+        <helpers>
+            <bluecom_geoipdefaults>
+                <class>Bluecom_GeoIpDefaults_Helper</class>
+            </bluecom_geoipdefaults>
+        </helpers>
+    </global>
+</config>

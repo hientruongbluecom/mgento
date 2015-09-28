@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Bluecom_GeoIpDefaults>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Bluecom_GeoIpDefaults>
+    </modules>
+</config>
